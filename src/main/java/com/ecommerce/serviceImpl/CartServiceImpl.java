@@ -54,8 +54,6 @@ public class CartServiceImpl implements CartService {
         return cartRepository.saveAndFlush(cart);
     }
 
-
-
     @Override
     public String addCartItem(Long userId, AddItemRequest request) throws ProductException {
         Cart cart = cartRepository.findByUserId(userId);
@@ -76,5 +74,6 @@ public class CartServiceImpl implements CartService {
         }
         return "item add to cart";
     }
+
 
 }

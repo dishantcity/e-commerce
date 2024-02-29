@@ -59,6 +59,7 @@ public class AdminProductController {
         return new ResponseEntity<List<Product>>(products, HttpStatus.CREATED);
     }
 
+
     @PutMapping("/{productId}/update")
     public ResponseEntity<Product> updateProductHandler(@RequestBody Product product, @PathVariable Long productId) throws
             ProductException {
@@ -76,6 +77,7 @@ public class AdminProductController {
 //        ApiResponse res=new ApiResponse("products created successfully",true);
 //        return new ResponseEntity<ApiResponse>(res,HttpStatus.ACCEPTED);
 //    }
+
 
 
     @PostMapping("/creates")

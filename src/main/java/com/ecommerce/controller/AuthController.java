@@ -69,6 +69,7 @@ public class AuthController {
         User createdUser = new User();
         createdUser.setEmail(email);
         createdUser.setFirstName(firstName);
+
         createdUser.setLastName(lastName);
         createdUser.setMobile(mobile);
         createdUser.setCreatedAt(LocalDateTime.now());
