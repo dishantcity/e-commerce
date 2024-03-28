@@ -90,7 +90,9 @@ public class AdminProductController {
         }
         ApiResponse response = new ApiResponse("product created successfully", true);
         return new ResponseEntity<List<Product>>(productList, HttpStatus.CREATED);
+
     }
 
 }
+
 
