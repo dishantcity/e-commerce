@@ -5,6 +5,7 @@ import com.ecommerce.exception.ProductException;
 import com.ecommerce.exception.UserException;
 import com.ecommerce.model.Product;
 import com.ecommerce.model.User;
+import com.ecommerce.repo.ProductRepository;
 import com.ecommerce.request.CreateProductRequest;
 import com.ecommerce.response.ApiResponse;
 import com.ecommerce.service.ProductService;
@@ -31,6 +32,8 @@ public class AdminProductController {
 
     @Autowired
     UserService userService;
+    @Autowired
+    private ProductRepository productRepository;
 
     @PostMapping("/")
     public ResponseEntity<Product> createProductHandler(@RequestBody CreateProductRequest req) throws ProductException {
@@ -77,9 +80,6 @@ public class AdminProductController {
 //        ApiResponse res=new ApiResponse("products created successfully",true);
 //        return new ResponseEntity<ApiResponse>(res,HttpStatus.ACCEPTED);
 //    }
-
-
-
     @PostMapping("/creates")
     public ResponseEntity<List<Product>> createMultipleProduct(@RequestBody List<CreateProductRequest> requests) throws
             ProductException {
